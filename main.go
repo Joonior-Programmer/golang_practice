@@ -12,5 +12,31 @@ func main() {
 	*/
 
 	account1 := baccount.CreateBankAccount("Joon")
+
+	err := account1.Deposit(-1)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	err = account1.Deposit(10)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	err = account1.Withdraw(-1)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	err = account1.Withdraw(11)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	err = account1.Withdraw(5)
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	fmt.Println(account1)
 }
